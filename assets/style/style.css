@@ -1,0 +1,301 @@
+* {
+text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+.bold {
+    font-weight: bold;
+}
+
+.line_through {
+    text-decoration: line-through;
+}
+
+.grid {
+    display: grid;
+    grid-template: minmax(100px, auto) repeat(6, 1fr) minmax(150px, auto) / auto;
+    margin: 0 15%;
+    gap: 1rem;
+}
+
+/* Ниже я обозначила основную сетку (header, main, footer) */
+
+header {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    background-color: rgba(250, 235, 215, 0.446);
+}
+
+header nav ul {
+    display: grid;
+    grid-template: repeat(1, minmax(50px, auto)) / repeat(12, minmax(20px, auto));
+    gap: 1rem;
+    font-size: larger;
+    font-weight: 400;
+    align-items: center;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.logo::after {
+    content:url(../icons/Frame.svg);
+    }
+
+
+main {
+    grid-row: 2/8;
+    grid-column: 1/1;
+/* далее делаю сетку внутри элемента */
+    display: grid;
+    grid-template: repeat(10, minmax(50px, auto)) / repeat(2, minmax(200px, auto));
+    gap: 1rem;
+}
+
+/* собираем матрешку */
+
+.sale {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    /* далее делаю сетку внутри элемента */
+    display: grid;
+    grid-template: repeat(10, minmax(20px, auto)) / repeat(8, minmax(100px, auto));
+}
+
+.winter_sale {
+    grid-row: 2/2;
+    grid-column: 2/2;
+    align-self: flex-end;  
+}
+
+.word_sale90_first {
+    grid-row: 3/3;
+    grid-column: 1/4;
+    font-size: 36px;
+}
+
+.running_shoes {
+    grid-row: 1/5;
+    grid-column: 4/6;
+}
+
+.old_price {
+    grid-row: 1/1;
+    grid-column: 7/7;    
+    align-self: flex-end;
+    font-size: 20px;
+}
+
+.new_price {
+    grid-row: 2/2;
+    grid-column: 7/7;
+    font-size: 32px;
+    color: red;
+}
+
+.button_look_models {
+    grid-column: 2/2;
+    grid-row: 4/4;    
+    width: 200px;
+    height: 50px;
+}
+
+button, input[type=button] {
+    background-color: #D7B399;
+    color: white;
+    border: none;
+}
+
+.slider {
+grid-row: 10/10;
+grid-column: 1/8;
+justify-self: center;
+}
+
+.free_delivery {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    background-color: black;
+    color: white;
+}
+
+.man {
+    grid-row: 3/5;
+    grid-column: 1/2;
+    /* далее делаю сетку внутри элемента */
+    display: grid;
+    grid-template: repeat(3, minmax(20px, auto)) repeat(2, minmax(50px, auto)) / repeat(2, minmax(50px, auto));
+    gap: 1rem;
+}
+
+.man > p:nth-child(1) {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    text-align: left;
+}
+.man > p:nth-child(2) {
+    grid-row: 2/2;
+    grid-column: 1/1;
+    text-align: left;
+}
+
+.man button {
+    grid-column: 1/1;
+    width: 100px;
+    height: 50px;
+
+}
+.img_man {
+    grid-row: 2/4;
+    grid-column: 2/-1;
+    justify-self: center;
+}
+
+.image-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.image:hover .image-overlay {
+    opacity: 1;
+}
+
+
+.woman {
+    grid-row: 3/5;
+    grid-column: 2/-1;
+    /* далее делаю сетку внутри элемента */
+    display: grid;
+    grid-template: repeat(3, minmax(20px, auto)) repeat(2, minmax(50px, auto)) / repeat(2, minmax(50px, auto));
+    gap: 1rem;
+}
+
+.woman > p:nth-child(1) {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    text-align: left;
+}
+.woman > p:nth-child(2) {
+    grid-row: 2/2;
+    grid-column: 1/1;
+    text-align: left;
+}
+
+.woman button {
+    grid-column: 1/1;
+    width: 100px;
+    height: 50px;
+
+}
+.img_woman {
+    grid-row: 2/4;
+    grid-column: 2/-1;
+    justify-self: center;
+}
+
+.new {
+    grid-row: 5/7;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template: minmax(20px, auto) minmax(50px, auto) minmax(30px, auto) / repeat(4, minmax(50px, auto));
+    gap: 1rem;
+}
+
+.border {
+    border: 3px solid #D7B399;
+}
+
+.new_collection_text {
+    grid-row: 1/1;
+    grid-column: 1/-1;
+    justify-self: center;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.new_collection {
+    grid-row: 2/2;
+    padding: 10px;
+}
+
+.color {
+    color: #D7B399;
+}
+
+.new button:last-child {
+    grid-row: 3/3;
+    grid-column: 1/-1;
+    width: 200px;
+    height: 50px;
+    justify-self: center;
+}
+
+.e-mail {
+    grid-row: 7/8;
+    grid-column: 1/-1;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.sale90 {
+    grid-row: 8/10;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template: minmax(20px, auto) minmax(50px, auto) minmax(30px, auto) / repeat(4, minmax(50px, auto));
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.word_sale90 {
+    grid-row: 1/1;
+    grid-column: 1/-1;
+    font-size: 36px;
+}
+
+.sale_collection{
+    grid-row: 2/2;
+    padding: 10px;
+}
+
+.sale90 button:last-child {
+    grid-row: 3/3;
+    grid-column: 1/-1;
+    width: 200px;
+    height: 50px;
+    justify-self: center;
+}
+
+footer {
+    grid-row: 8/8;
+    grid-column: 1/1;
+    /* далее делаю сетку внутри элемента */
+    display: grid;
+    grid-template: repeat(1, 100px) / repeat(4, 250px);
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+text-decoration: none;
+color: black;
+}
+
+footer a:hover {
+    color: rgb(89, 0, 255);
+    font-weight: 700;
+    }
