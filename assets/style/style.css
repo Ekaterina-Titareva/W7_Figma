@@ -21,8 +21,7 @@ ul {
 
 .grid {
     display: grid;
-    grid-template: minmax(100px, auto) repeat(6, 1fr) minmax(150px, auto) / auto;
-    margin: 0 15%;
+    margin: 0 15% 3% 15%;
     gap: 1rem;
 }
 
@@ -42,6 +41,10 @@ header nav ul {
     cursor: pointer;
 }
 
+header nav ul li:hover {
+    font-weight: 700;
+}
+
 .name {
     margin: 0;
     padding: 0;
@@ -53,7 +56,6 @@ header nav ul {
     content:url(../icons/Frame.svg);
     }
 
-
 main {
     grid-area: 2/1/8/1;
 /* далее делаю сетку внутри элемента */
@@ -61,8 +63,6 @@ main {
     grid-template: repeat(10, minmax(50px, auto)) / repeat(2, minmax(200px, auto));
     gap: 1rem;
 }
-
-/* собираем матрешку */
 
 .sale {
     grid-area: 1/1/2/-1;
@@ -111,7 +111,7 @@ button, input[type=button] {
 }
 
 .slider {
-    grid-area: 10/1/10/8;
+    grid-area: 10/1/10/-1;
     justify-self: center;
 }
 
@@ -125,7 +125,7 @@ button, input[type=button] {
     grid-area: 3/1/5/2;
     /* далее делаю сетку внутри элемента */
     display: grid;
-    grid-template: repeat(3, minmax(20px, auto)) repeat(2, minmax(50px, auto)) / repeat(2, minmax(50px, auto));
+    grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -144,9 +144,14 @@ button, input[type=button] {
     height: 60%;
 
 }
+
 .img_man {
     grid-area: 2/2/4/-1;
     justify-self: center;
+}
+
+img {
+    object-fit: cover;
 }
 
 .image-overlay {
@@ -165,7 +170,7 @@ button, input[type=button] {
     grid-area: 3/2/5/-1;
     /* далее делаю сетку внутри элемента */
     display: grid;
-    grid-template: repeat(3, minmax(20px, auto)) repeat(2, minmax(50px, auto)) / repeat(2, minmax(50px, auto));
+    grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -173,6 +178,7 @@ button, input[type=button] {
     grid-area: 1/1/1/1;
     text-align: left;
 }
+
 .woman > p:nth-child(2) {
     grid-area: 2/1/2/1;
     text-align: left;
@@ -180,10 +186,11 @@ button, input[type=button] {
 
 .woman button {
     grid-column: 1/1;
-    width: 100px;
-    height: 50px;
+    width: 50%;
+    height: 60%;
 
 }
+
 .img_woman {
     grid-area: 2/2/4/-1;
     justify-self: center;
@@ -192,7 +199,7 @@ button, input[type=button] {
 .new {
     grid-area: 5/1/7/-1;
     display: grid;
-    grid-template: minmax(20px, auto) minmax(50px, auto) minmax(30px, auto) / repeat(4, minmax(50px, auto));
+    grid-template: minmax(20px, auto) 1fr minmax(30px, auto) / repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -232,7 +239,7 @@ button, input[type=button] {
 .sale90 {
     grid-area: 8/1/10/-1;
     display: grid;
-    grid-template: minmax(20px, auto) minmax(50px, auto) minmax(30px, auto) / repeat(4, minmax(50px, auto));
+    grid-template: minmax(20px, auto) 1fr minmax(30px, auto) / repeat(4, 1fr);
     gap: 1rem;
     justify-content: space-around;
 }
@@ -258,7 +265,7 @@ footer {
     grid-area: 8/1/8/-1;
     /* далее делаю сетку внутри элемента */
     display: grid;
-    grid-template: repeat(1, 100px) / repeat(4, 250px);
+    grid-template: 1fr / repeat(4, 1fr);
     gap: 1rem;
     justify-content: space-around;
     align-items: center;
@@ -271,6 +278,6 @@ cursor: pointer;
 }
 
 footer a:hover {
-    color: rgb(89, 0, 255);
     font-weight: 700;
     }
+
