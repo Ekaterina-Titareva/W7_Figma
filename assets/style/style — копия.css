@@ -15,11 +15,8 @@ ul {
     text-transform: uppercase;    
 }
 
-button, input[type=button] {
-    background-color: #D7B399;
-    color: white;
-    border: none;
-    cursor: pointer;
+.line_through {
+    text-decoration: line-through;
 }
 
 .grid {
@@ -28,42 +25,36 @@ button, input[type=button] {
     gap: 1rem;
 }
 
+/* Ниже я обозначила основную сетку (header, main, footer) */
+
 header {
-    display: flex;
-    justify-content: space-between;
+    grid-area: 1/1/1/1;
     background-color: rgba(250, 235, 215, 0.446);
 }
 
 header nav ul {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template: repeat(1, minmax(50px, auto)) / repeat(12, minmax(20px, auto));
     gap: 1rem;
     font-weight: 400;
     align-items: center;
-}
-
-header nav ul a {
-    text-decoration: none;
     cursor: pointer;
-    color: black;
 }
 
 header nav ul li:hover {
     font-weight: 700;
 }
 
-header input {
-    display: none;
-}
-
 .name {
+    margin: 0;
+    padding: 0;
     font-size: 2em;
     font-weight: 700;
 }
 
-.basket {
-    margin: 15px;
-}
+.logo::after {
+    content:url(../icons/Frame.svg);
+    }
 
 main {
     grid-area: 2/1/8/1;
@@ -98,7 +89,6 @@ main {
     grid-area: 1/7/1/7; 
     align-self: flex-end;
     font-size: 1.25em;
-    text-decoration: line-through;
 }
 
 .new_price {
@@ -111,6 +101,13 @@ main {
     grid-area: 4/2/4/2;  
     width: 200px;
     height: 50px;
+}
+
+button, input[type=button] {
+    background-color: #D7B399;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .slider {
@@ -151,6 +148,10 @@ main {
 .img_man {
     grid-area: 2/2/4/-1;
     justify-self: center;
+}
+
+img {
+    object-fit: cover;
 }
 
 .image-overlay {
@@ -271,177 +272,12 @@ footer {
 }
 
 footer a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+text-decoration: none;
+color: black;
+cursor: pointer;
 }
 
 footer a:hover {
     font-weight: 700;
-}
-
-@media screen and (max-width: 768px) {
-    /* стили для планшета */
-    .grid {
-        margin: 0 10% 3% 10%;
     }
 
-    .name {
-        margin: 3% 10%;
-        min-width: 300px;
-    }
-
-    #menu__toggle {
-        opacity: 0;
-    }
-    #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
-    }
-    #menu__toggle:checked ~ .menu__btn > span::before {
-        top: 0;
-        transform: rotate(0);
-        }
-    #menu__toggle:checked ~ .menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
-    #menu__toggle:checked ~ .menu__box {
-        visibility: visible;
-        left: 0;
-    }
-    .menu__btn {
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        width: 26px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 1;
-    }
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #D7B399;
-        transition-duration: .25s;
-    }
-
-    .menu__btn > span::before {
-        content: '';
-        top: -.5em;
-    }
-
-    .menu__btn > span::after {
-        content: '';
-        top: .5em;
-        }
-        
-    .menu__box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 300px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #D7B399;
-        box-shadow: 1px 0px 6px #000000;
-        transition-duration: .25s;
-    }
-    .menu__item {
-        display: block;
-        padding: .8em 1.5em;
-        color: #000;
-        font-size: 1.25em;
-        font-weight: 600;
-        text-decoration: none;
-        transition-duration: .25s;
-    }
-    .menu__item:hover {
-        background-color: #ffffff70;
-    }
-
-    .sale {
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-.winter_sale {
-    align-self: center;
-}
-
-.old_price {
-    align-self: center;
-}
-
-.slider {
-    margin: 10%;
-}
-
-    .man {
-        grid-area: 3/1/4/-1;
-        display: grid;
-        grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .woman {
-        grid-area: 4/1/5/-1;
-        display: grid;
-        grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .new {
-        grid-area: 5/1/7/-1;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .new button:last-child {
-    align-self: center;
-    }
-    
-    .sale90 {
-        grid-area: 8/1/10/-1;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-
-    .sale90 button:last-child {
-        align-self: center;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;  
-    }    
-}
-
-@media screen and (max-width: 425px) {
-    /* стили для смартфона */
-
-    .name {
-        font-size: 1em;
-    } 
-    .logo {
-        margin-left: 1em;
-    } 
-.running_shoes {
-    width: 100%;
-}
-}
