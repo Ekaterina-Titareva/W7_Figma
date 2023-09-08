@@ -57,6 +57,8 @@ header input {
 }
 
 .name {
+    margin: 0;
+    padding: 0;
     font-size: 2em;
     font-weight: 700;
 }
@@ -69,7 +71,7 @@ main {
     grid-area: 2/1/8/1;
 /* далее делаю сетку внутри элемента */
     display: grid;
-    grid-template: repeat(10, minmax(50px, auto)) / repeat(2, minmax(200px, auto));
+    grid-template: repeat(10, minmax(50px, auto)) / repeat(2, minmax(100px, auto));
     gap: 1rem;
 }
 
@@ -136,6 +138,7 @@ main {
     grid-area: 1/1/1/1;
     text-align: left;
 }
+
 .man > p:nth-child(2) {
     grid-area: 2/1/2/1;
     text-align: left;
@@ -145,7 +148,6 @@ main {
     grid-column: 1/1;
     width: 50%;
     height: 60%;
-
 }
 
 .img_man {
@@ -163,7 +165,6 @@ main {
     transform: scale(1.1);
     transition: 0.3s linear all;
 }
-
 
 .woman {
     grid-area: 3/2/5/-1;
@@ -200,6 +201,7 @@ main {
     display: grid;
     grid-template: minmax(20px, auto) 1fr minmax(30px, auto) / repeat(4, 1fr);
     gap: 1rem;
+    justify-content: space-around;
 }
 
 .border {
@@ -280,35 +282,64 @@ footer a:hover {
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
+    /* стили для ноутбука */
+
+    .running_shoes {
+        width: 420px;
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .new_collection {
+        width: 170px;
+    }
+
+    .sale_collection {
+        width: 170px;
+    }
+
+    .dress {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 769px) {
     /* стили для планшета */
+
     .grid {
         margin: 0 10% 3% 10%;
     }
 
     .name {
-        margin: 3% 10%;
         min-width: 300px;
     }
 
     #menu__toggle {
         opacity: 0;
     }
+
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
-        }
+    }
+
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
     }
+
     #menu__toggle:checked ~ .menu__box {
         visibility: visible;
         left: 0;
     }
+
     .menu__btn {
         background-color: rgb(0, 0, 0);
         display: flex;
@@ -321,6 +352,7 @@ footer a:hover {
         cursor: pointer;
         z-index: 1;
     }
+
     .menu__btn > span,
     .menu__btn > span::before,
     .menu__btn > span::after {
@@ -340,8 +372,8 @@ footer a:hover {
     .menu__btn > span::after {
         content: '';
         top: .5em;
-        }
-        
+    }
+    
     .menu__box {
         display: block;
         position: fixed;
@@ -357,6 +389,7 @@ footer a:hover {
         box-shadow: 1px 0px 6px #000000;
         transition-duration: .25s;
     }
+
     .menu__item {
         display: block;
         padding: .8em 1.5em;
@@ -366,6 +399,7 @@ footer a:hover {
         text-decoration: none;
         transition-duration: .25s;
     }
+
     .menu__item:hover {
         background-color: #ffffff70;
     }
@@ -377,17 +411,17 @@ footer a:hover {
         align-items: center;
     }
     
-.winter_sale {
-    align-self: center;
-}
+    .winter_sale {
+        align-self: center;
+    }
 
-.old_price {
-    align-self: center;
-}
+    .old_price {
+        align-self: center;
+    }
 
-.slider {
-    margin: 10%;
-}
+    .slider {
+        margin: 10%;
+    }
 
     .man {
         grid-area: 3/1/4/-1;
@@ -395,14 +429,14 @@ footer a:hover {
         grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .woman {
         grid-area: 4/1/5/-1;
         display: grid;
         grid-template: repeat(3, 1fr) repeat(2, minmax(50px, auto)) / repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .new {
         grid-area: 5/1/7/-1;
         display: flex;
@@ -414,7 +448,7 @@ footer a:hover {
     .new button:last-child {
     align-self: center;
     }
-    
+
     .sale90 {
         grid-area: 8/1/10/-1;
         display: flex;
@@ -422,52 +456,56 @@ footer a:hover {
         align-items: center;
         gap: 1rem;
     }
-    
 
-    .sale90 button:last-child {
-        align-self: center;
+
+        .sale90 button:last-child {
+            align-self: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;  
+        }    
     }
 
-    footer {
-        display: flex;
-        flex-direction: column;  
-    }    
-}
-
-@media screen and (max-width: 425px) {
-    /* стили для смартфона */
+    @media screen and (max-width: 426px) {
+        /* стили для смартфона */
 
     .name {
         font-size: 1em;
-    } 
+    }
+
     .logo {
         margin-left: 1em;
     } 
-.running_shoes {
-    width: 100%;
-}
-.man {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
 
-.img_man {
-    display: none;
-}
+    .running_shoes {
+        width: 100%;
+    }
 
-.woman {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    gap: 1rem;
-}
+    .man {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.img_woman {
-    display: none;
-}
-.bold {
-    font-size: 1em;
-}
-}
+    .img_man {
+        display: none;
+    }
+
+    .woman {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        gap: 1rem;
+    }
+
+    .img_woman {
+        display: none;
+    }
+
+    .bold {
+        font-size: 1em;
+    }
+    }
