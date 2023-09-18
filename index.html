@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/icons/Frame.svg" type="image/svg">
     <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/normalize.css"> <!-- Подключаем сначала normalize.css -->
     <link rel="stylesheet" href="./assets/style/style.css"> <!--Далее подключаем свои стили -->
 </head>
 
-<body class="grid">
+<body class="body">
     <header>
         <div>
             <p class="uppercase name"><img class="logo" src="./assets/icons/Frame.svg" alt="logo">the shop</p>
@@ -46,65 +51,67 @@
             <p><span class="bold uppercase">бесплатная доставка</span> ОТ 3000₽</p>
             <p>Сделайте заказ и получите подарок!</p>
         </div>
-        <section class="man">
-            <p class="uppercase"><span class="bold">мужская</span> коллекция</p>
-            <p>Обувь, пуловеры, костюмы</p>
-            <button class="button_right">&#8594;</button>
-            <img class="img_man" src="./assets/img/man.png" alt="man">
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+        <section class="collections">
+            <article class="man">
+                <p class="uppercase"><span class="bold">мужская</span> коллекция</p>
+                <p>Обувь, пуловеры, костюмы</p>
+                <button class="button_right">&#8594;</button>
+                <img class="img_man" src="./assets/img/man.png" alt="man">
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="woman">
-            <p class="uppercase"><span class="bold">женская</span> коллекция</p>
-            <p>Обувь, пуловеры, костюмы</p>
-            <button class="button_right">&#8594;</button>
-            <img class="img_woman" src="./assets/img/woman.png" alt="woman">
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+            </article>
+            <article class="woman">
+                <p class="uppercase"><span class="bold">женская</span> коллекция</p>
+                <p>Обувь, пуловеры, костюмы</p>
+                <button class="button_right">&#8594;</button>
+                <img class="img_woman" src="./assets/img/woman.png" alt="woman">
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
-                <div class="image-overlay">
-                    <p>футболка</p>
+                <div class="item">
+                    <img class="image" src="./assets/img/t_shirt.png" alt="футболка">
+                    <div class="image-overlay">
+                        <p>футболка</p>
+                    </div>
                 </div>
-            </div>
+            </article>
         </section>
         <section class="new">
             <p class="bold uppercase new_collection_text">новые модели</p>
@@ -128,7 +135,7 @@
                 <p>Коктейльное платье</p>
                 <p class="color bold">₽ 40 000</p>
             </div>
-            <button class="uppercase">все модели</button>
+            <button class="uppercase">все модели &#8594;</button>
         </section>
         <div class="e-mail">
             <p class="uppercase">получчайте скидки и подарки</p>
@@ -157,35 +164,35 @@
                 <p>Коктейльное платье</p>
                 <p class="color bold">₽ 40 000</p>
             </div>
-            <button class="uppercase">все модели</button>
+            <button class="uppercase">все модели &#8594;</button>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <ul>
-            <p class="bold uppercase">основные ссылки</p>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Оплата</a></li>
+            <p class="bold uppercase padding">основные ссылки</p>
+            <li class="padding"><a href="#">О компании</a></li>
+            <li class="padding"><a href="#">Каталог</a></li>
+            <li class="padding"><a href="#">Доставка</a></li>
+            <li class="padding"><a href="#">Оплата</a></li>
         </ul>
         <ul>
-            <p class="bold uppercase">категории</p>
-            <li><a href="#">Мужская одежда</a></li>
-            <li><a href="#">Женская одежда</a></li>
-            <li><a href="#">Детская одежда</a></li>
-            <li><a href="#">Для животных</a></li>
+            <p class="bold uppercase padding">категории</p>
+            <li class="padding"><a href="#">Мужская одежда</a></li>
+            <li class="padding"><a href="#">Женская одежда</a></li>
+            <li class="padding"><a href="#">Детская одежда</a></li>
+            <li class="padding"><a href="#">Для животных</a></li>
         </ul>
         <ul>
-            <p class="bold uppercase">полезные ссылки</p>
-            <li><a href="#">Таблица размеров</a></li>
-            <li><a href="#">Блог о моде</a></li>
-            <li><a href="#">Наша миссия</a></li>
+            <p class="bold uppercase padding">полезные ссылки</p>
+            <li class="padding"><a href="#">Таблица размеров</a></li>
+            <li class="padding"><a href="#">Блог о моде</a></li>
+            <li class="padding"><a href="#">Наша миссия</a></li>
         </ul>
         <ul>
-            <p class="bold uppercase">соц сети</p>
-            <li><a href="#">VK.com</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
+            <p class="bold uppercase padding">соц сети</p>
+            <li class="padding"><a class="vk" href="#">VK.com </a></li>
+            <li class="padding"><a class="fb" href="#">Facebook </a></li>
+            <li class="padding"><a class="ig" href="#">Instagram </a></li>
         </ul>
     </footer>
 </body>
