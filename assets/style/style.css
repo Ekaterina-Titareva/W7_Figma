@@ -299,6 +299,11 @@ footer a:hover {
     content: url(../icons/ig.svg);
 }
 
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 1025px) {
     /* стили для ноутбука */
 
@@ -506,5 +511,9 @@ footer a:hover {
 
     .bold {
         font-size: 1rem;
+    }
+
+    .links {
+        flex-direction: column;
     }
     }
